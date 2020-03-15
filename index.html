@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="icon" href="/_as/img/favicon.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Passion+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="quiz.css">
+
+    <title>QUIZ</title>
+</head>
+
+<body>
+    <!-- QUIZ -->
+    <div class="container" id="quiz">
+        <h2 id="g_title">Selection quiz</h2>
+        <p id="g_description">Selection quiz model using bootstrap tab navigation.</p>
+        <ul class="nav nav-tabs nav-justified" id="nav-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="quest01-tab" data-toggle="tab" href="#quest01" role="tab"
+                    aria-controls="quest01" aria-selected="true">Question 1</a>
+                <div class="ques_tab"></div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" id="quest02-tab" data-toggle="tab" href="#quest02" role="tab"
+                    aria-controls="quest02" aria-selected="false" onclick="h_pop(1);">Question 2</a>
+                <div class="ques_tab"><span class="new_tab" id="sp1">NEXT</span></div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" id="quest03-tab" data-toggle="tab" href="#quest03" role="tab"
+                    aria-controls="quest03" aria-selected="false" onclick="h_pop(2);">Question 3</a>
+                <div class="ques_tab"><span class="new_tab" id="sp2">NEXT</span></div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" id="quest04-tab" data-toggle="tab" href="#quest04" role="tab"
+                    aria-controls="quest04" aria-selected="false" onclick="h_pop(3);">Question 4</a>
+                <div class="ques_tab"><span class="new_tab" id="sp3">NEXT</span></div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" id="quest05-tab" data-toggle="tab" href="#quest05" role="tab"
+                    aria-controls="quest05" aria-selected="false" onclick="h_pop(4);">Question 5</a>
+                <div class="ques_tab"><span class="new_tab" id="sp4">NEXT</span>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" id="result-tab" data-toggle="tab" href="#result" role="tab"
+                    aria-controls="result" aria-selected="false" onclick="h_pop(5);">Result</a>
+                <div class="ques_tab"><span class="new_tab" id="sp5">NEXT</span></div>
+            </li>
+        </ul>
+        <div class="tab-content disabled" id="nav-tabContent">
+
+            <!-- question 01 -->
+            <div class="tab-pane fade show active" id="quest01" role="tabpanel" aria-labelledby="quest01-tab">
+                <h2>Question 1 title</h2>
+                <p>Question text.</p>
+                <hr class="my-4">
+                <form id="quiz0" name="quiz0">
+                    <div class="conteiner">
+                        <div class="row quiz-row">
+                            <div class="col-2" id="qa_container"><input type="radio" class="bt_qa0" name="question"
+                                    value="1A" id="1A"><span class="checkmark"></span></div>
+                            <div class="col-10" id="qa_text">
+                                <p>Answer 1 (right)</p>
+                            </div>
+                        </div>
+                        <div class="row quiz-row">
+                            <div class="col-2" id="qa_container"><input type="radio" class="bt_qa0" name="question"
+                                    value="1B" id="1B"><span class="checkmark"></span></div>
+                            <div class="col-10" id="qa_text">
+                                <p>Answer 2</p>
+                            </div>
+                        </div>
+                        <div class="row quiz-row">
+                            <div class="col-2" id="qa_container"><input type="radio" class="bt_qa0" name="question"
+                                    value="1C" id="1C"><span class="checkmark"></span></div>
+                            <div class="col-10" id="qa_text">
+                                <p>Answer 3</p>
+                            </div>
+                        </div>
+                        <div class="row quiz-row">
+                            <div class="col-2" id="qa_container"><input type="radio" class="bt_qa0" name="question"
+                                    value="1D" id="1D"><span class="checkmark"></span></div>
+                            <div class="col-10" id="qa_text">
+                                <p>Answer 4</p>
+                            </div>
+                        </div>
+                        <div class="row quiz-row">
+                            <div class="col-2" id="qa_container"><input type="radio" class="bt_qa0" name="question"
+                                    value="1E" id="1E"><span class="checkmark"></span></div>
+                            <div class="col-10" id="qa_text">
+                                <p>Answer 5</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="cover text-center">
+                    <button class="btn bt_sub" id="bt_conf0" type="button" onclick="check(0);">SUBMIT</button>
+                </div>
+            </div>
+
+            <!-- question 02 -->
+            <div class="tab-pane fade" id="quest02" role="tabpanel" aria-labelledby="quest02-tab">
+                <h2>Question 2 title</h2>
+                <p>Question text.</p>
+                <hr class="my-4">
+                <form id="quiz1" name="quiz1">
+                    <div class="conteiner">
+                        <div class="row quiz-row">
+                            <div class="col-2" id="qa_container"><input type="radio" class="bt_qa1" name="question"
+                                    value="2A" id="2A"><span class="checkmark"></span></div>
+                            <div class="col-10" id="qa_text">
+                                <p>Answer 1</p>
+                            </div>
+                        </div>
+                        <div class="row quiz-row">
+                            <div class="col-2" id="qa_container"><input type="radio" class="bt_qa1" name="question"
+                                    value="2B" id="2B"><span class="checkmark"></span></div>
+                            <div class="col-10" id="qa_text">
+                                <p>Answer 2 (right)</p>
+                            </div>
+                        </div>
+                        <div class="row quiz-row">
+                            <div class="col-2" id="qa_container"><input type="radio" class="bt_qa1" name="question"
+                                    value="2C" id="2C"><span class="checkmark"></span></div>
+                            <div class="col-10" id="qa_text">
+                                <p>Answer 3</p>
+                            </div>
+                        </div>
+                        <div class="row quiz-row">
+                            <div class="col-2" id="qa_container"><input type="radio" class="bt_qa1" name="question"
+                                    value="2D" id="2D"><span class="checkmark"></span></div>
+                            <div class="col-10" id="qa_text">
+                                <p>Answer 4</p>
+                            </div>
+                        </div>
+                        <div class="row quiz-row">
+                            <div class="col-2" id="qa_container"><input type="radio" class="bt_qa1" name="question"
+                                    value="2E" id="2E"><span class="checkmark"></span></div>
+                            <div class="col-10" id="qa_text">
+                                <p>Answer 5</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="cover text-center">
+                    <button class="btn bt_sub" id="bt_conf1" type="button" onclick="check(1);">SUBMIT</button>
+                </div>
+            </div>
+
+            <!-- question 03 -->
+            <div class="tab-pane fade" id="quest03" role="tabpanel" aria-labelledby="quest03-tab">
+                <h2>Question 3 title</h2>
+                <p>Question text.</p>
+                <hr class="my-4">
+                <form id="quiz2" name="quiz2">
+                    <div class="conteiner">
+                        <div class="row quiz-row">
+                            <div class="col-2" id="qa_container"><input type="radio" class="bt_qa2" name="question"
+                                    value="3A" id="3A"><span class="checkmark"></span></div>
+                            <div class="col-10" id="qa_text">
+                                <p>Answer 1</p>
+                            </div>
+                        </div>
+                        <div class="row quiz-row">
+                            <div class="col-2" id="qa_container"><input type="radio" class="bt_qa2" name="question"
+                                    value="3B" id="3B"><span class="checkmark"></span></div>
+                            <div class="col-10" id="qa_text">
+                                <p>Answer 2</p>
+                            </div>
+                        </div>
+                        <div class="row quiz-row">
+                            <div class="col-2" id="qa_container"><input type="radio" class="bt_qa2" name="question"
+                                    value="3C" id="3C"><span class="checkmark"></span></div>
+                            <div class="col-10" id="qa_text">
+                                <p>Answer 3 (right)</p>
+                            </div>
+                        </div>
+                        <div class="row quiz-row">
+                            <div class="col-2" id="qa_container"><input type="radio" class="bt_qa2" name="question"
+                                    value="3D" id="3D"><span class="checkmark"></span></div>
+                            <div class="col-10" id="qa_text">
+                                <p>Answer 4</p>
+                            </div>
+                        </div>
+                        <div class="row quiz-row">
+                            <div class="col-2" id="qa_container"><input type="radio" class="bt_qa2" name="question"
+                                    value="3E" id="3E"><span class="checkmark"></span></div>
+                            <div class="col-10" id="qa_text">
+                                <p>Answer 5</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="cover text-center">
+                    <button class="btn bt_sub" id="bt_conf2" type="button" onclick="check(2);">SUBMIT</button>
+                </div>
+            </div>
+
+            <!-- question 04 -->
+            <div class="tab-pane fade" id="quest04" role="tabpanel" aria-labelledby="quest04-tab">
+                <h2>Question 4 title</h2>
+                <p>Question text.</p>
+                <hr class="my-4">
+                <form id="quiz3" name="quiz3">
+                    <div class="conteiner">
+                        <div class="row quiz-row">
+                            <div class="col-2" id="qa_container"><input type="radio" class="bt_qa3" name="question"
+                                    value="4A" id="4A"><span class="checkmark"></span></div>
+                            <div class="col-10" id="qa_text">
+                                <p>Answer 1</p>
+                            </div>
+                        </div>
+                        <div class="row quiz-row">
+                            <div class="col-2" id="qa_container"><input type="radio" class="bt_qa3" name="question"
+                                    value="4B" id="4B"><span class="checkmark"></span></div>
+                            <div class="col-10" id="qa_text">
+                                <p>Answer2</p>
+                            </div>
+                        </div>
+                        <div class="row quiz-row">
+                            <div class="col-2" id="qa_container"><input type="radio" class="bt_qa3" name="question"
+                                    value="4C" id="4C"><span class="checkmark"></span></div>
+                            <div class="col-10" id="qa_text">
+                                <p>Answer 3</p>
+                            </div>
+                        </div>
+                        <div class="row quiz-row">
+                            <div class="col-2" id="qa_container"><input type="radio" class="bt_qa3" name="question"
+                                    value="4D" id="4D"><span class="checkmark"></span></div>
+                            <div class="col-10" id="qa_text">
+                                <p>Answer 4 (right)</p>
+                            </div>
+                        </div>
+                        <div class="row quiz-row">
+                            <div class="col-2" id="qa_container"><input type="radio" class="bt_qa3" name="question"
+                                    value="4E" id="4E"><span class="checkmark"></span></div>
+                            <div class="col-10" id="qa_text">
+                                <p>Answer 5</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="cover text-center">
+                    <button class="btn bt_sub" id="bt_conf3" type="button" onclick="check(3);">SUBMIT</button>
+                </div>
+            </div>
+
+            <!-- question 05 -->
+            <div class="tab-pane fade" id="quest05" role="tabpanel" aria-labelledby="quest05-tab">
+                <h2>Question 5 title</h2>
+                <p>Question text.</p>
+                <hr class="my-4">
+                <form id="quiz4" name="quiz4">
+                    <div class="conteiner">
+                        <div class="row quiz-row">
+                            <div class="col-2" id="qa_container"><input type="radio" class="bt_qa4" name="question"
+                                    value="5A" id="5A"><span class="checkmark"></span></div>
+                            <div class="col-10" id="qa_text">
+                                <p>Answer 1</p>
+                            </div>
+                        </div>
+                        <div class="row quiz-row">
+                            <div class="col-2" id="qa_container"><input type="radio" class="bt_qa4" name="question"
+                                    value="5B" id="5B"><span class="checkmark"></span></div>
+                            <div class="col-10" id="qa_text">
+                                <p>Answer 2</p>
+                            </div>
+                        </div>
+                        <div class="row quiz-row">
+                            <div class="col-2" id="qa_container"><input type="radio" class="bt_qa4" name="question"
+                                    value="5C" id="5C"><span class="checkmark"></span></div>
+                            <div class="col-10" id="qa_text">
+                                <p>Answer 3</p>
+                            </div>
+                        </div>
+                        <div class="row quiz-row">
+                            <div class="col-2" id="qa_container"><input type="radio" class="bt_qa4" name="question"
+                                    value="5D" id="5D"><span class="checkmark"></span></div>
+                            <div class="col-10" id="qa_text">
+                                <p>Answer 4</p>
+                            </div>
+                        </div>
+                        <div class="row quiz-row">
+                            <div class="col-2" id="qa_container"><input type="radio" class="bt_qa4" name="question"
+                                    value="5E" id="5E"><span class="checkmark"></span></div>
+                            <div class="col-10" id="qa_text">
+                                <p>Answer 5 (right)</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="cover text-center">
+                    <button class="btn bt_sub" id="bt_conf4" type="button" onclick="check(4);">SUBMIT</button>
+                </div>
+            </div>
+
+            <!-- result -->
+            <div class="tab-pane fade text-center" id="result" role="tabpanel" aria-labelledby="result-tab">
+                <h3 id="r_score">Result</h3>
+                <p id="r_text"></p>
+            </div>
+
+        </div>
+
+        <!-- MODAL|Feedback -->
+
+        <div class="modal fade" id="quizfeed" tabindex="-1" role="dialog" aria-labelledby="quizfeed" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content text-center">
+                    <div class="modal-body" id="m_content">
+                        <h2 class="modal-title" id="t_message"></h2>
+                        <img id="m_picture">
+                        <p id="c_message"></p>
+                        <button type="button" class="btn bt_sub" data-dismiss="modal">CLOSE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <footer class="page-footer font-small">
+                <div class="copyright text-center p-2">
+                    <a href="http://mauhiro.com/portfolio">by Maurício Hiroyuki Ohphata.</a> <a
+                        href="https://github.com/mauricio-ohphata/quiz01_js/"> GitHub </a>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+
+    <!-- CONTENT END | JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="quiz.js"></script>
+</body>
+
+</html>
