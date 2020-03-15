@@ -13,7 +13,7 @@ let chance = 1;
 let q_nun = 0;
 
 //feddback content
-let pictures = ["img/ic_negativo.png", "img/ic_negativo.png", "img/ic_positivo.png"];
+let pictures = ["img/img_feed3.png", "img/img_feed2.png", "img/img_feed1.png"];
 let t_text = ["Not this time", "Don't worry", "GreatJob"];
 let c_text = [
     ["The right answer is answer 1.", "You have one more chance, read carefully and select the right answer.", "Congratulations, right answer."],
